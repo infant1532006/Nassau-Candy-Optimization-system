@@ -6,11 +6,12 @@ matplotlib
 seaborn
 plotly
 
-scikit-learn
+scikit-learn==1.7.2
 joblib
+pgeocode
 
 streamlit
 openpyxl
 jupyter
 ipykernel
-xgboost
+xgboost==3.1.3

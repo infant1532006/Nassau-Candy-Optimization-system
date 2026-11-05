@@ -14,7 +14,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from src.data_loader import load_audit_data
+import src.data_loader
+
 from src.optimization import summarize_opportunities
 from src.recommendation_engine import (
     generate_geographic_opportunities,
@@ -407,14 +408,14 @@ st.sidebar.markdown("---")
 
 # ML Prediction page routing
 if st.query_params.get("page") == "ml_prediction":
-    from ml_prediction import render_ml_prediction
+    from app.ml_prediction import render_ml_prediction
 
     render_ml_prediction()
     st.stop()
 
 @st.cache_data
 def load_analysis():
-    audit_data = load_audit_data()
+    audit_data = src.data_loader.load_audit_data()
     opportunities = generate_geographic_opportunities(audit_data)
     best_alternatives = select_best_geographic_alternative(
         opportunities)
