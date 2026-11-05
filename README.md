@@ -35,6 +35,8 @@ methodology, implementation, experiments, and findings of the
 Nassau Candy Factory Optimization project.
 
 📄 [Read my Research Paper (PDF)]:https://drive.google.com/file/d/1m00Sv3RUVNzOu8HUbfiGMz_zfZynlr0N/view?usp=drive_link
+🌐 Live Application:
+https://factory-optimization-ml.streamlit.app/
 
 ## Main Features
 
