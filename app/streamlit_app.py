@@ -2,21 +2,29 @@ import os
 import sys
 import base64
 from pathlib import Path
-import pandas as pd
-import plotly.express as px
-import streamlit as st
-from src.data_loader import load_audit_data
-from src.optimization import summarize_opportunities
-from src.recommendation_engine import (generate_geographic_opportunities,classify_opportunities,select_best_geographic_alternative,)
-from src.factory_rules import (get_expected_factory,PRODUCT_FACTORY_MAPPING,)
 
-
+# Find the project root
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+# Add project root to Python path
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+import pandas as pd
+import plotly.express as px
+import streamlit as st
+
+from src.data_loader import load_audit_data
+from src.optimization import summarize_opportunities
+from src.recommendation_engine import (
+    generate_geographic_opportunities,
+    classify_opportunities,
+    select_best_geographic_alternative,
+)
+from src.factory_rules import (
+    get_expected_factory,
+    PRODUCT_FACTORY_MAPPING,
+)
 
 
 st.set_page_config(
