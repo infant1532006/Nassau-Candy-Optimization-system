@@ -1,0 +1,76 @@
+NASSAU CANDY DISTRIBUTOR
+DATA PREPROCESSING REPORT
+========================================
+
+DATASET FILES
+----------------------------------------
+Audit dataset: nassau_candy_processed_audit.csv
+Modeling dataset: nassau_candy_modeling_dataset.csv
+
+FINAL DATASET DIMENSIONS
+----------------------------------------
+Audit dataset: 10,194 rows, 42 columns
+Modeling dataset: 10,194 rows, 5 columns
+
+PREPROCESSING VALIDATION
+----------------------------------------
+Missing values in audit dataset: 0
+Duplicate Row IDs: 0
+Completely duplicated rows: 0
+Product-to-factory mapping: Passed
+Factory distance validation: Passed
+Financial formula validation: Passed
+Calendar feature validation: Passed
+Modeling dataset reload comparison: Passed
+Modeling dataset missing values: 0
+
+MODELING DATASET
+----------------------------------------
+Features:
+- Ship Mode
+- Product Name
+- Current Factory
+- Region
+
+Target:
+- Lead Time (reconstructed proxy)
+
+Machine learning training: Not started
+
+IMPORTANT DATA LIMITATIONS
+----------------------------------------
+1. Order Date and Ship Date ranges are inconsistent.
+2. Raw date differences are implausibly large.
+3. Lead Time was reconstructed using a baseline adjustment.
+4. Lead Time is a proxy, not verified actual shipping time.
+5. Straight-line geographic distances are not road or truck distances.
+6. Repeated business records were retained because they were not
+   proven to be accidental duplicates.
+7. Financial values have not been confirmed to represent a particular
+   currency.
+
+MODELING CAUTIONS
+----------------------------------------
+A model trained on the reconstructed Lead Time predicts the proxy,
+not verified real-world delivery time.
+
+Gross Profit equals Sales minus Cost. Do not use Sales or Cost as
+predictors when predicting Gross Profit if those values would already
+reveal the answer.
+
+Factory reassignment predictions need extra caution because the dataset
+does not establish how products perform when produced at alternative
+factories.
+
+MODELING DATASET VALIDATION
+----------------------------------------
+File: nassau_candy_modeling_dataset.csv
+Rows: 10,194
+Columns: 5
+Missing values: 0
+Reload comparison: Passed
+
+STATUS
+----------------------------------------
+Preprocessing and modeling dataset preparation completed.
+Machine learning training has not started.

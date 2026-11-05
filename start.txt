@@ -1,0 +1,5 @@
+cd "C:\Users\INFANT JESUS\OneDrive\Desktop\Nassau-Candy-Optimization"
+
+$env:PYTHONPATH = (Get-Location).Path
+
+uv run python -m streamlit run app/streamlit_app.py

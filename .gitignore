@@ -1,0 +1,77 @@
+
+# ==============================
+# Python environment
+# ==============================
+.venv/
+venv/
+env/
+ENV/
+
+# ==============================
+# Python cache files
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# ==============================
+# Jupyter Notebook
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# Environment variables & secrets
+# ==============================
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ==============================
+# IDE settings
+# ==============================
+.vscode/
+.idea/
+
+# ==============================
+# Operating system files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Logs and temporary files
+# ==============================
+*.log
+*.tmp
+*.bak
+temp/
+tmp/
+
+# ==============================
+# Testing and coverage
+# ==============================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# Build and distribution
+# ==============================
+build/
+dist/
+*.egg-info/
+
+# ==============================
+# Python tool caches
+# ==============================
+.ruff_cache/
+.mypy_cache/
+.pytype/
+
+# ==============================
+# Streamlit cache
+# ==============================
+.streamlit/cache/

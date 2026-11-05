@@ -1,0 +1,22 @@
+
+[theme]
+base = "light"
+primaryColor = "#B48A3C"
+backgroundColor = "#F7F8FC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#252536"
+font = "sans serif"
+showWidgetBorder = true
+borderColor = "#E5E5EF"
+
+[theme.sidebar]
+backgroundColor = "#EEF0F8"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#252536"
+primaryColor = "#B48A3C"
+
+[server]
+runOnSave = true
+
+[client]
+showErrorDetails = true
